@@ -28,7 +28,7 @@ const Login = () => {
         message.error("A user is logged in")
         return
     }else{
-        setUser(findUser)
+        user.push(findUser)
         
         
     }

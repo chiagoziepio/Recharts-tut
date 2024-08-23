@@ -9,7 +9,7 @@ export const Users = [
         name: "Arinze",
         username: "Aribobo",
         password : "arinze",
-        role: "user",
+        role: "admin",
     },
     {
         name: "Chukwu",

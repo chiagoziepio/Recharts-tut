@@ -9,7 +9,7 @@ const Layout = () => {
         <Header/>
         <div className='flex gap-x-[24px]'>
         <Aside />
-        <div className='w-[90%]'>
+        <div className='w-[80%]'>
             <Outlet/>
         </div>
         </div>
