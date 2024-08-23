@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    min-height: 60vh;
+    
+}
+.ant-form-item-label .ant-form-item-required{
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1;
+}
