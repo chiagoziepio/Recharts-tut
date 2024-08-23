@@ -1,8 +1,11 @@
-import React from 'react'
-
+import React, { useContext } from 'react'
+import { context } from "../Utils/context";
 const SuperAdminPanel = () => {
+  const {user,setUser} = useContext(context)
+  console.log(user);
+  
   return (
-    <div>SuperAdminPanel</div>
+    <div className=''>SuperAdminPanel</div>
   )
 }
 

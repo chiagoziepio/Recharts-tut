@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Form, message, Button, Input } from "antd";
 import { BiUser } from "react-icons/bi";
 import { Users } from "../data/data";
 import { useNavigate } from "react-router-dom";
+import { context } from "../Utils/context";
 
 const Login = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
+  const {user,setUser} = useContext(context)
+  
+  
   const onfinish = (values) => {
     const findUser = Users.find(user => user.username === values.username);
+    
     
     if(!findUser){
         message.error("invalid credentials")
@@ -19,6 +24,15 @@ const Login = () => {
         message.error("incorrect password")
         return
     }
+    if(user.length){
+        message.error("A user is logged in")
+        return
+    }else{
+        setUser(findUser)
+        
+        
+    }
+    
     switch (findUser.role) {
         case "super-admin":
             navigate("/main/superadminpanel")
@@ -38,6 +52,7 @@ const Login = () => {
         default:
             break;
     }
+
   };
   return (
     <div className="flex items-center justify-center bg-[whitesmoke] h-full">

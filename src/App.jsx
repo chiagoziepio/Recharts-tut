@@ -5,10 +5,11 @@ import Home from "./components/Home"
 import DashBoard from "./components/DashBoard"
 import AdminPanel from "./components/AdminPanel"
 import SuperAdminPanel from "./components/SuperAdminPanel"
+import ContextProvider from "./Utils/context"
 function App() {
   
   return (
-    <>
+    <ContextProvider>
       <div className="h-[100vh]">
 
         <Routes>
@@ -21,7 +22,7 @@ function App() {
           </Route>
         </Routes>
       </div>
-    </>
+    </ContextProvider>
   )
 }
 
