@@ -11,7 +11,7 @@ const Aside = () => {
   
 
   return (
-    <div className="sm:w-[15%] bg-slate-800 h-full">
+    <div className="sm:w-[15%] bg-slate-800 min-h-[100vh]">
       <div className="flex items-center flex-col gap-y-[15px]">
         <BiMenu size={30}  className="cursor-pointer"/>
         <div className="flex flex-col w-full p-[7px] gap-y-[15px]">

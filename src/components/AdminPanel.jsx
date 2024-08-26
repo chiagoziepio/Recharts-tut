@@ -17,6 +17,8 @@ const AdminPanel = () => {
   const navigate = useNavigate();
   const { user } = useContext(context);
   //console.log(user);
+  
+  
 
   useEffect(() => {
     if (!user.length) {
@@ -34,43 +36,43 @@ const AdminPanel = () => {
   }, []);
   const data = [
     {
-      name: "Page A",
+      name: "proposed",
       sales: 4000,
       gains: 2400,
       amt: 2400,
     },
     {
-      name: "Page B",
+      name: "decrease",
       sales: 3000,
       gains: 1398,
       amt: 2210,
     },
     {
-      name: "Page C",
+      name: "increase",
       sales: 2000,
       gains: 9800,
       amt: 2290,
     },
     {
-      name: "Page D",
+      name: "active user",
       sales: 2780,
       gains: 3908,
       amt: 2000,
     },
     {
-      name: "Page E",
+      name: "non-active user",
       sales: 1890,
       gains: 4800,
       amt: 2181,
     },
     {
-      name: "Page F",
+      name: "new user",
       sales: 2390,
       gains: 3800,
       amt: 2500,
     },
     {
-      name: "Page G",
+      name: "deleted users",
       sales: 3490,
       gains: 4300,
       amt: 2100,
@@ -81,15 +83,15 @@ const AdminPanel = () => {
       <div className="h-full">
         <h3 className="font-bold text-[37px] my-[15px]">Admin panel</h3>
         <div className="">
-          <div className="flex flex-wrap gap-3 w-full justify-evenly mb-5">
-            <div className=" max-w-[200px] w-[25%] h-[200px] rounded-[15px] flex flex-col justify-center items-center bg-[green]  ">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 w-full justify-evenly mb-5">
+            <div className=" max-w-[200px] w-[100%] sm:w-[25%] h-[200px] rounded-[15px] flex flex-col justify-center items-center bg-[green]  ">
               <p className="font-bold text-[26px] ">Active Users</p>
               <span className="text-[20px]">1000</span>
               <span className="flex items-center">
                 2% <IoIosArrowRoundUp size={17} />
               </span>
             </div>
-            <div className=" max-w-[200px] w-[25%] h-[200px] rounded-[15px] flex flex-col justify-center items-center bg-[#ffff0062]  ">
+            <div className=" max-w-[200px] w-[100%] sm:w-[25%] h-[200px] rounded-[15px] flex flex-col justify-center items-center bg-[#ffff0062]  ">
               <p className="font-bold text-[26px] text-center">
                 Non-active Users
               </p>
@@ -98,14 +100,14 @@ const AdminPanel = () => {
                 4% <IoIosArrowRoundDown size={17} />
               </span>
             </div>
-            <div className=" max-w-[200px] w-[25%] h-[200px] rounded-[15px] flex flex-col justify-center items-center bg-[#8000805e]  ">
+            <div className=" max-w-[200px] w-[100%] sm:w-[25%] h-[200px] rounded-[15px] flex flex-col justify-center items-center bg-[#8000805e]  ">
               <p className="font-bold text-[26px] ">New Users</p>
               <span className="text-[20px]">500</span>
               <span className="flex items-center ">
                 7% <IoIosArrowRoundUp size={17} />
               </span>
             </div>
-            <div className=" max-w-[200px] w-[25%] h-[200px] rounded-[15px] flex flex-col justify-center items-center bg-[#b222226c]  ">
+            <div className=" max-w-[200px] w-[100%] sm:w-[25%] h-[200px] rounded-[15px] flex flex-col justify-center items-center bg-[#b222226c]  ">
               <p className="font-bold text-[26px] text-center">Deleted Users</p>
               <span className="text-[20px]">100</span>
               <span className="flex items-center">

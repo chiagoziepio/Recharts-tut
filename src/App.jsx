@@ -6,11 +6,21 @@ import DashBoard from "./components/DashBoard"
 import AdminPanel from "./components/AdminPanel"
 import SuperAdminPanel from "./components/SuperAdminPanel"
 import ContextProvider from "./Utils/context"
+import Loader from "./Loader/Loader"
+import { useEffect, useState } from "react"
 function App() {
-  
+  const [loading, setLoading] = useState(true)
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false)
+    },3000)
+  },[])
+  if(loading){
+    return <Loader/>
+  }
   return (
+      <div className="min-h-[100vh]">
     <ContextProvider>
-      <div className="h-[100vh]">
 
         <Routes>
           <Route path="/" element ={<Login/>}/>
@@ -21,8 +31,8 @@ function App() {
               <Route path = "/main/superadminpanel" element = {<SuperAdminPanel/>}/>
           </Route>
         </Routes>
-      </div>
     </ContextProvider>
+      </div>
   )
 }
 

@@ -55,7 +55,7 @@ const Login = () => {
 
   };
   return (
-    <div className="flex items-center justify-center bg-[whitesmoke] h-full">
+    <div className="flex items-center justify-center bg-[whitesmoke] min-h-[100vh]">
       <Form
         className="!w-[450px] h-auto rounded-[15px] bg-[white] flex flex-col gap-y-[17px] p-[24px]"
         layout="vertical"
