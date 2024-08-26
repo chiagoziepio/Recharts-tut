@@ -9,12 +9,12 @@ export const Users = [
         name: "Arinze",
         username: "Aribobo",
         password : "arinze",
-        role: "admin",
+        role: "user",
     },
     {
         name: "Chukwu",
         username: "Chiyy",
         password : "chiyy",
-        role: "user"
+        role: "admin"
     },
 ]

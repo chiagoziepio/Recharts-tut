@@ -45,8 +45,8 @@ const Login = () => {
             break;
     
         case "user":
-            navigate("/main")
-            
+            navigate("/main/dashbord")
+            message.success("logged in")
             break;
     
         default:

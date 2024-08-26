@@ -7,10 +7,10 @@ const Layout = () => {
   return (
     <div className='bg-[#141313] h-full text-white flex flex-col relative '>
         <Header/>
-        <div className='flex gap-x-[24px]'>
+        <div className='flex gap-x-[24px] h-[90%]'>
         <Aside />
-        <div className='w-[80%]'>
-            <Outlet/>
+        <div className='w-[80%] h-full'>
+            <Outlet/> 
         </div>
         </div>
         
